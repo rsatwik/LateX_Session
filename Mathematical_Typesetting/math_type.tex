@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[hmargin=4.5cm,vmargin=4.5cm]{geometry}
+\usepackage{amsmath}
+\title{Mathematical Typesetting}
+\author{Author}
+\date{\today}
+\setlength\parindent{0pt} % Removes paragraph indent
+
+% $ begins or ends mathematical mode
+
+\begin{document}
+\maketitle
+$\alpha$,$\beta$,$\gamma$,$\delta$ \\
+% writing product of variables
+$\alpha a$\\
+
+% creating spaces
+$\alpha \, a$\\ % backslash comma creates a smaller space 
+$\alpha \ a$\\ % backslash space creates a space between the variables
+$\alpha \enskip a $\\ % enskip creates more space between variables
+$\alpha \quad a$\\ % quad creates more space between variables
+$\alpha \qquad a$\\
+
+
+% Because the font changes on mathematical mode, make sure that you declare the variables in middle of text using mathematical mode
+
+Product of $\alpha$ and $a$ is $\alpha a$\\ 
+
+% negative sign to be used `inside' mathematical mode
+-$\alpha$	\\
+$-\alpha$	\\
+
+% fractions
+$\frac a b$\\
+$\frac {ab} {cd}$ \\  % values inside {} are taken as one argument
+$\frac {a} {b+\frac{1}{c}}$ \\
+
+% other formats to display fractions
+% frac displayed based on context, we can force the context
+$\dfrac{ab}{cd}$ \\ % display style
+$\tfrac{ab}{cd}$ \\	 % text style
+
+$x_a$ \\  % subscripts
+$x_{ab}$ \\
+$x^a$ \\ % superscripts
+$x_a^b$ \\		
+
+$\int_{-\infty}^{\pi/2}xdx$ \\
+
+% matrices need amsmath package
+$\begin{matrix}
+a & b \\        % & for columns and \\ for rows
+c & d & e
+\end{matrix}$ \\
+
+$\begin{pmatrix}
+a & b \\        % & for columns and \\ for rows
+c & d & e
+\end{pmatrix}$ \\
+
+
+$\begin{bmatrix}
+a & b \\        % & for columns and \\ for rows
+c & d & e
+\end{bmatrix}$ \\
+
+$\begin{vmatrix}
+a & b \\        % & for columns and \\ for rows
+c & d & e
+\end{vmatrix}$ \\
+
+$\begin{Vmatrix}
+a & b \\        % & for columns and \\ for rows
+c & d & e
+\end{Vmatrix}$ \\
+
+
+\end{document}

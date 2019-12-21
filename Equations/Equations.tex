@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+\usepackage[textwidth=15cm]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+The following proportional, derivative controller has two tuning parameters: $K$ and $\tau_d$
+
+%
+% First equation
+%
+\begin{align*}  % align plays the role of $ mode and hence $ is avoided in the following equations
+u(t) &= K \left[ e(t)+\tau_d\frac{de(t)}{dt}\right] % \left[ and \right] creates square brackets
+% place all the equations in one align to align all the equations
+%
+% &= aligns the equations by = sign
+%
+% Second equation
+%
+\intertext{We want to apply the above controller to the following equation:} % for text in align mode
+% when in align never use blank lines, use % to create blank lines
+%
+% LHS
+%
+\frac{d}{dt}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix} &=
+%
+% RHS
+%
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & \alpha & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}+
+%
+% || Term
+%
+\begin{bmatrix}
+0\\0\\ \beta
+\end{bmatrix}\mu \\ %\\ for getting equations one below another
+%
+% Third equation
+%
+% when in align never use blank lines, use % to create blank lines
+%
+% LHS
+%
+\frac{d}{dt}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix} &=
+%
+% RHS
+%
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & \alpha & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}+
+%
+% || Term
+%
+\begin{bmatrix}
+0\\0\\ \beta
+\end{bmatrix}\mu
+\end{align*}
+The above equation is the model of a plant.\\
+
+\begin{align*}
+a &= b+c \\
+a\,b\,c\,d &= f + g + h
+\end{align*}
+
+\begin{align*}
+& a = b+c \\  % & is used to align the text differently
+& a\,b\,c\,d = f + g + h
+\end{align*}
+
+\begin{align*}
+\alpha &= \beta + \gamma \\
+\alpha + \beta &= \frac{\gamma}{\delta} + \delta\int\mu d \mu \\
+\alpha + \beta \mu &= \gamma \delta \\
+\end{align*}
+
+\newpage
+%
+% Numbering the equations
+%
+\begin{align}  % remove * in align* to number the equations
+u(t) &= K \left[ e(t)+\tau_d\frac{de(t)}{dt}\right] 
+%
+% Second equation
+%
+\intertext{We want to apply the above controller to the following equation:}
+%
+% LHS
+%
+\frac{d}{dt}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix} &=
+%
+% RHS
+%
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & \alpha & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}+
+%
+% || Term
+%
+\begin{bmatrix}
+0\\0\\ \beta
+\end{bmatrix}\mu
+\end{align}
+The above equation 2 is the model of a plant.\\
+
+
+
+
+
+%
+% Not Numbering certain equations
+%
+\begin{align} 
+u(t) &= K \left[ e(t)+\tau_d\frac{de(t)}{dt}\right]\nonumber % \left[ and \right] creates square brackets
+% 
+% Second equation
+%
+\intertext{We want to apply the above controller to the following equation:}
+%
+% LHS
+%
+\frac{d}{dt}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix} &=
+%
+% RHS
+%
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & \alpha & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}+
+%
+% || Term
+%
+\begin{bmatrix}
+0\\0\\ \beta
+\end{bmatrix}\mu
+\label{PID} % using label and reference links the equation in the text. Furhter, when the equation is modified the text is modified automatically
+\end{align}
+The above equation \ref{PID} is the model of a plant.\\
+
+
+\end{document}
