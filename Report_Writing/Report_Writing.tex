@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper]{report} % report class is used
+\usepackage[hmargin=4.5cm,vmargin=4.5cm]{geometry}	% the margins set for the entire report
+
+% declaration of the title page
+\title{Introduction to Report Writing}
+\author{Author}
+\date{\today \\ First created on 21 December 2019} % // is new line
+
+\begin{document}
+\maketitle % using the above declared title page
+
+
+\chapter{First chapter} % report class requires at least 1 chapter
+
+\section{This is the first section}
+\Huge Text \normalsize corresponding to this section goes here. Some preliminary sentences can go first, before the subsections start.
+
+\textbf{Test test test} % Inserts a bold fonted text
+
+\section{Inserted section}	% Numbering is done automatically, one can focus on the content to write
+
+\subsection{First sub section in inserted section}
+Hello!
+
+\subsubsection{First sub sub section}
+Low level text. Some more text
+
+\section{This is the Third section}
+\Huge Text \normalsize corresponding to this section goes here. Some preliminary sentences can go first, before the subsections start.
+
+\newpage % moving the following contents to a new page
+
+\section{Inserted section}
+
+\subsection{Third sub section in third section}
+Hello!
+
+\subsubsection{Third sub sub section}
+Low level text. Some more text
+
+
+
+
+
+\chapter{Second chapter} 
+
+\section{This is the first section}
+\Huge Text \normalsize corresponding to this section goes here. Some preliminary sentences can go first, before the subsections start.
+
+\section{Inserted section}
+
+\subsection{First sub section in inserted section}
+Hello!
+
+\subsubsection{First sub sub section}
+Low level text. Some more text
+
+\section{This is the Third section}
+\Huge Text \normalsize corresponding to this section goes here. Some preliminary sentences can go first, before the subsections start.
+
+\appendix % Declaring appendix
+\chapter{New chapter}
+\chapter{Another chapter}
+\tableofcontents % Inserts an auto-updating table of contents
+% Most important: * Compile 3 times to make sure that the table of contents is updated*
+
+\end{document}  % The compilation ends here, everything next is just a comment. Can be used for debugging section by section
+
+% also when multiple end documents are present then only the first one is considered 
