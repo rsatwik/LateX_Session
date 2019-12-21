@@ -1,0 +1,108 @@
+miketex console -> packages -> change -> 2nd option -> next -> browse to repositories -> select folder
+........................................................................................................................................................
+Any packages must be written before the begin document
+Ex:
+\usepackage{setspace}
+\begin{document}
+\doublespacing
+........................................................................................................................................................
+To create a bibilography file
+make a .bib file first a bibilography file
+copy the ref from google scholar in Bibtex
+now the biblio.bib and the document.tex file must be in the same folder
+
+@string{ijpe="Int.J.Prod.Econ"} is a variable for use in the bib file ex: author = ijpe
+
+@Book{key
+author={...}
+......
+}
+
+/bibilographystyle{plain} apa or anyother can be used
+
+
+in the text \cite{key1,key2,..} text continues
+
+Even the bibilography has to be compiled 2 times for updation
+
+
+In zotero or mendelave the entire library's entires can be used to automatically create a 'synchronized' bibtex file that can be used for the document
+........................................................................................................................................................
+reference: Latex Wiki book
+........................................................................................................................................................
+for images
+\listoffigures   
+
+include a package called graphicsx
+\begin{figure}
+\includegraphics[width=0.5cm]{\Desktop\image.png}      % the parameters in [] are optional and {} are mandatory
+ % Use only either height or width but not both to maintain proportions of an image
+\caption{Caption for image}
+\end{figure}
+........................................................................................................................................................
+start page numbers with roman numbers and then arabic page numbers
+\pagenumbering{roman}
+
+before the chapters
+\pagenumbering{arabic}
+
+........................................................................................................................................................
+for typing the mathematical equations
+latex mathematical equation pdf
+or latex equation editor ex: codecogs
+
+
+for numbering equations
+
+\begin{align}
+write all equations
+text
+equations
+\end{align}
+
+for no numbering for a particular equation
+after an equation
+\nonumber
+
+for refering a equation in the document
+at the equation\label{eqn1}
+
+else where in the text \ref{eqn1}
+
+........................................................................................................................................................
+presentations beamer in document class
+frame is a slide here
+
+beamer matrix: google this
+the first link gives the matrix
+
+				theme name
+color theme:..................
+
+........................................................................................................................................................
+
+on the spoken tutorial wiki page a link to compiled cheat sheet is available
+........................................................................................................................................................
+tables
+& symbol for next column
+\\ end the row
+\hline adds a line
+empty space before & combines rows
+c = centre aligned
+r = right aligned
+| = vertical line
+
+use 'multicolumns' to combine columns 
+
+\begin{tabular}{ccccc} % 5 c implies 5 columns
+\hline
+Ba & Cd & eF % 100 \\ \hline
+Ba & Cd & eF % 100 \\ \hline
+\hline
+\end{tabular}
+........................................................................................................................................................
+
+
+
+
+
