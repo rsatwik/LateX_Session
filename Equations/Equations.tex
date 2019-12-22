@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[textwidth=15cm]{geometry}
 \usepackage{amsmath}
+\usepackage{mathtools}
 
 \begin{document}
 The following proportional, derivative controller has two tuning parameters: $K$ and $\tau_d$
@@ -163,9 +164,25 @@ x_1\\x_2\\x_3
 \begin{bmatrix}
 0\\0\\ \beta
 \end{bmatrix}\mu
-\label{PID} % using label and reference links the equation in the text. Furhter, when the equation is modified the text is modified automatically
+\label{PID} % label and reference links the equation to the text. Further, when the equation is modified the text is modified automatically. *Requires twice compilation*.
 \end{align}
 The above equation \ref{PID} is the model of a plant.\\
 
+\begin{align*}|x| =\begin{cases}x & \text{if $x\ge 0$}\\-x & \text{if $x\le 0$}\end{cases}\end{align*}
+
+
+This example shows \verb|aligned| equations within
+an \verb|align| environment.
+\begin{align}
+  \phantom{i + j + k}
+  &\begin{aligned}
+    \mathllap{a} &= b + c + d\\
+      &\qquad + e + f + g + x + y + z
+  \end{aligned}\\
+  &\begin{aligned}
+    \mathllap{i + j + k} &= l + m + n\\
+      &\qquad + o + p + q
+  \end{aligned}
+\end{align}
 
 \end{document}
