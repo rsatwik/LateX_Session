@@ -1,0 +1,254 @@
+\documentclass{beamer}
+%\documentclass[brown]{beamer} % changes the default color blue to brown in the presentation
+% \documentclass[handout]{beamer} % make a printer friendly version of the presentation where animation slides are combined into one slide *needs twice compilation* 
+\usepackage{beamerthemesplit}  % changing themes of the presentation
+\usepackage{beamerthemeshadow} % changing color theme of the presentation
+\logo{\includegraphics[height=1cm]{iitblogo.pdf}} % adds logo to every slide in presentation
+\setbeamercolor{alerted text}{fg=blue} % this is to change the highlighting color in the animation to blue, fg = foreground
+
+
+\begin{document}
+
+\sffamily \bfseries % makes all the letter in the presentation bold
+
+\title[Presentation using \LaTeX\ and Beamer\hspace{0.5cm}\insertframenumber/\inserttotalframenumber]{Spoken Tutorial:\\Presentation using \LaTeX\ and Beamer} % the additional arguments change the footer content, hspace adds space, and insert frame number adds the slide number
+
+
+\author[What should be printed]{Author} % here too the optional argument is used to print the footer data
+
+
+
+\date{Text\\ 31 December 1900}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item{Topic one}
+\item{Topic two}
+\item{Topic three}
+\item{Topic four}
+\item{Topic five}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Equations:  from Spoken Tutorial on
+  Equations} 
+Let us start with the model of an inverted
+pendulum:
+\begin{align*}
+\frac d{dt} 
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\
+  x_4 \end{bmatrix} & =
+\begin{bmatrix} 
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & -\gamma & 0 & 0 \\
+0 & \alpha & 0 & 0
+\end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\
+  x_4 \end{bmatrix} +
+\begin{bmatrix} 0 \\ 0 \\ -\delta \\
+  -\beta \end{bmatrix} \Delta\mu
+%
+\intertext{Proportional, integral, derivative
+  controller is most popular in industry.  It has
+  three tuning parameters: $K$, $\tau_i$ and
+  $\tau_d$.  The integral mode includes the term
+  $\int_0^t()dt$.} 
+% 
+% use {\color{blue}{equation} to change the color of the equation
+%
+{\color{blue} u(t)} & = {\color{blue} K \left\{ e(t)+\frac
+  1{\tau_i}\int_0^te(t)dt + \tau_d\frac{de(t)}{dt}
+\right\}}
+\end{align*}
+\end{frame}
+
+% animation * To present a concept in steps *
+\begin{frame}
+  \frametitle{From Spoken Tutorial on Letter
+    Writing}
+National Mission on Education through ICT, with an
+outlay of Rs. 4,600 crore (\$ 1 billion): \pause
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\item<+-|alert@+> All products funded by this mission
+  will be delivered as open source.
+\item<+-|alert@+> Web based support through
+  www.sakshat.ac.in.
+\end{enumerate}
+\end{frame}
+
+% Adding figures to presentation
+\begin{frame}
+\frametitle{Example of a figure}
+\begin{center}
+\includegraphics[width=\linewidth]{iitb}
+\end{center}
+\end{frame}
+
+% guidelines for including figures
+\begin{frame}
+\frametitle{Hints for Including Figures}
+\begin{itemize}
+\item<+-> Do not use floated environments in
+  presentations 
+  - \\ {\tt begin\{figure\}}, {\tt end\{figure\}}, 
+  etc. 
+\item<+-> Use {\tt includegraphics} directly
+\item<+-> Do not include {\tt caption}, figure
+  number, etc.
+\item<+-> The audience will not remember figure
+  numbers, any way
+\item<+-> If you want to refer to a previously
+  shown figure, show it again - do not refer to it
+  by number
+\end{itemize}
+\end{frame}
+
+% two columns part 1
+\begin{frame}
+\frametitle{Two Columns 1}
+\begin{minipage}[c]{0.45\textwidth} % c = center, 45% of the text width
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\end{enumerate}
+\end{minipage}
+\end{frame}
+
+% two columns part 2
+\begin{frame}
+\frametitle{Two Columns 2}
+\begin{minipage}[c]{0.45\textwidth}
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\end{enumerate}
+\end{minipage} 
+\hfill
+\begin{minipage}[c]{0.45\textwidth}
+\includegraphics[width=\linewidth]{iitb}
+\end{minipage}
+\end{frame}
+
+% two columns part 3
+\begin{frame}
+\frametitle{Two Columns 3}
+\begin{minipage}[c]{0.45\textwidth}
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\end{enumerate}
+\end{minipage} \pause % this pause will ensure that the second column is not displayed immediately as the slide starts and is displayed sequentially
+\hfill
+\begin{minipage}[c]{0.45\textwidth}
+\includegraphics[width=\linewidth]{iitb}
+\end{minipage}
+\end{frame}
+
+% adding Table to the presentation
+\begin{frame}
+\frametitle{Table: From Spoken Tutorial on Tables} 
+\begin{center}
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn 2 {||c|}{Fruit details} & 
+\multicolumn 3 {c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.) \\
+\hline 
+Mango & Malgoa & 18 & 50 &  \\ \cline{2-4}
+      & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jackfruit & Kolli Hills & 10 & 50 & 500 \\ \hline
+Banana & Green & 10 & 20 & 200 \\ \hline
+\multicolumn 4{||r|}{Total cost (Rs.)} & 2,200 \\
+\hline 
+\end{tabular}
+\end{center}
+\end{frame}
+
+% guidelines for including Tables
+\begin{frame}
+\frametitle{Hints for Including Tables}
+\begin{itemize}
+\item<+-> Do not use floated environments in
+  presentations 
+  - \\ {\tt begin\{table\}}, {\tt end\{table\}}, 
+  etc. 
+\item<+-> Use {\tt tabular} directly
+\item<+-> Do not include {\tt caption}, Table
+  number, etc.
+\item<+-> The audience will not remember Table
+  numbers, any way
+\end{itemize}
+\end{frame}
+
+% using fragile with verbatim
+\begin{frame}[fragile] % here fragile is added
+\frametitle{Example of Verbatim to Illustrate Scilab}
+\begin{verbatim}
+-->a = 1:5, b = 1:2:9
+\end{verbatim}
+{\color{blue}
+\begin{verbatim}
+ a  =
+ !   1.    2.    3.    4.    5. !
+ b  =
+ !   1.    3.    5.    7.    9. !
+\end{verbatim}}
+
+\begin{verbatim}
+-->a - 2
+\end{verbatim}
+{\color{blue}
+\begin{verbatim}
+ans  =
+ ! - 1.    0.    1.    2.    3. !
+\end{verbatim} }
+\end{frame}
+
+% where to get more information
+\begin{frame}
+\frametitle{Where to Get more Information on
+  Beamer?} 
+\begin{itemize}
+\item<+-|alert@+> Authoritative source: user guide to the Beamer class
+\item<+-|alert@+> Author: Till Tantau
+\item<+-|alert@+> File name: 
+  {\color{magenta} \tt beameruserguide.pdf} 
+\item<+-|alert@+> email: tantau@users.sourceforge.net 
+\item<+-|alert@+> At the time of creating this
+  tutorial, available at \\
+{\color{magenta} \small http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+\item<+-|alert@+> The web page for the Beamer
+  project is
+{\color{magenta} http://latex-beamer.sourceforge.net}
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{There Is No Largest Prime Number}\framesubtitle{The proof uses \textit{reductio ad absurdum}.}\begin{theorem}There is no largest prime number.\end{theorem}\begin{proof}\begin{enumerate}
+\item<1-| alert@1> Suppose $p$ were the largest prime number.\item<2-> Let $q$ be the product of the first $p$ numbers.\item<3-> Then $q+1$ is not divisible by any of them.
+\item<1-> But $q + 1$ is greater than $1$, thus divisible by some primenumber not in the first $p$ numbers.\qedhere\end{enumerate}\end{proof}\end{frame}
+
+\end{document}

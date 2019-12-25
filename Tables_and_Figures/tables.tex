@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{cclicenses,graphicx}
+\title{Tutorial on Tables and Figures}
+\author{Author \\ email \\ \byncsa} % creative commons license
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+\listoftables
+\listoffigures
+\newpage
+
+\begin{tabular}{rr} % rr implies two columns that are right aligned
+Mango & Mixed \\
+Jack fruit & Kolli Hills \\ 
+Banana & Green
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{|r|r|} % | line separates the columns by lines
+Mango & Mixed \\
+Jack fruit & Kolli Hills \\ 
+Banana & Green
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||r|r|}
+Mango & Mixed \\
+Jack fruit & Kolli Hills \\ 
+Banana & Green
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||l|c|} % left and centre aligned
+Mango & Mixed \\
+Jack fruit & Kolli Hills \\ 
+Banana & Green
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{|c|c|}\hline % hline for horizontal lines (on top)
+Mango & Mixed \\ 
+Jack fruit & Kolli Hills \\ 
+Banana & Green \\ 
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{|c|c|}\hline 
+Mango & Mixed \\ \hline
+Jack fruit & Kolli Hills \\ \hline
+Banana & Green \\ \hline
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||l|c|c|c|r|}\hline % last column has right align so that we can add the numbers
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Mixed & 20 & 75 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\end{tabular}
+\\.................................................................................\\
+% multicolumn command
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{c}{Fruit details} & \multicolumn{3}{c}{Cost calculations} \\ \hline % 2 implies 2 columns, c implies centre aligned
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Mixed & 20 & 75 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Mixed & 20 & 75 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\end{tabular}
+\\.................................................................................\\
+% Drawing lines in the middle of columns 
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Malgoa & 18 & 50 & \\ \hline % we need a cline here now
+		 & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Malgoa & 18 & 50 & \\ \cline{2-4} % cline between 2 to 4 columns
+		 & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\end{tabular}
+\\.................................................................................\\
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Malgoa & 18 & 50 & \\ \cline{2-4}
+		 & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\multicolumn{4}{||r|}{Total cost (Rs.)} & {2,200} \\ \hline
+\end{tabular}
+\\.................................................................................\\
+\newpage
+% placing the table in a table environment as an unit
+This is a
+\begin{table} % table environment
+\centering % places the table at the center of the document
+\caption{Cost of fruits in India} % adds caption to the table
+\vspace{1ex} % adds space between the caption and the table
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Malgoa & 18 & 50 & \\ \cline{2-4}
+		 & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\multicolumn{4}{||r|}{Total cost (Rs.)} & {2,200} \\ \hline
+\end{tabular}
+\end{table}
+an example table
+\\.................................................................................\\
+\newpage
+% Adding references of tables
+This is a
+\begin{table} 
+\centering 
+\caption{Cost of fruits in India} 
+% *always add the label after the caption command*
+\label{tab:Fruits}
+\vspace{1ex} 
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn{2}{||c|}{Fruit details} & \multicolumn{3}{c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.)\\ \hline
+Mango & Malgoa & 18 & 50 & \\ \cline{2-4}
+		 & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jack fruit & Kolli Hills & 10 & 50 & 500\\ \hline
+Banana & Green & 10 & 20 & 200\\ \hline
+\multicolumn{4}{||r|}{Total cost (Rs.)} & {2,200} \\ \hline
+\end{tabular}
+\end{table}
+an example table
+
+The cost of fruits is shown in Table \ref{tab:Fruits}
+
+\newpage
+% Including figures in a report, use graphicx package
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{iitb} % give the pdf with figure here, half line width is used
+% *figure captions are to be given after the figure is included (above command)*
+\caption{Golden jubilee logo of IIT Bombay}
+\label{fig:golden}
+\end{figure}
+
+Text figure \ref{fig:golden}
+
+% rotating figures
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth,angle=90]{iitb} % angle argument for rotating figures
+\caption{Golden jubilee logo of IIT Bombay}
+\label{fig:golden1}
+\end{figure}
+Text figure \ref{fig:golden1}
+
+
+\end{document}

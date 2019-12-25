@@ -1,0 +1,44 @@
+% for defining new command
+% \newcommand{command}{definition} or
+% \newcommand{command}[parameters]{definition}
+% at the beginning of the document
+
+\documentclass{article}
+\usepackage{amsfonts}
+
+% Example 1
+%\newcommand{\bbr}{\mathbb R} % type set R in mathbb i.e. math black board font 
+%\begin{document}
+%Let $\bbr$ be a set of Rational numbers. % using the new command
+%\end{document}
+
+% Example 2
+%\newcommand{\bb}[1]{\mathbb {#1}} % 1 : the commands has 1 parameter
+%\begin{document}
+%Let $\bb{R}$ be a set of Rational numbers and $\bb{Z}$ be the set of Complex numbers
+%\end{document}
+
+% Example 3
+%\newcommand{\add}[2]{\left(#1+#2\right)}
+%\begin{document}
+%Adding abc and xyz we get
+%$\add{abc}{xyz}$
+%\end{document}
+
+% Example 4
+\newcommand{\textbfit}[1]{\textbf{\emph{#1}}}
+\begin{document}
+Adding abc and xyz we get $\textbfit{abc*xyz}$ as the result
+\end{document}
+
+%..................................................................................................
+
+% overloading an existing command
+% \renewcommand{command}{definition}
+% at the beginning of the document
+
+% Example 1
+%\renewcommand{\S}{\mathcal{S}} % we redefined \S to produce a calligraphic font instead of section symbol
+%\begin{document}
+%Let $\S$ be a set
+%\end{document}

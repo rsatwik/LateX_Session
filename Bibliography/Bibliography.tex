@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,cclicenses}
+\usepackage{harvard} % this is a downloaded package for harvard style of referencing (a .sty file)
+\title{Tutorial on Bibliography}
+\author{Author\\email\\ \byncsa}
+\date{\today}
+\bibliographystyle{ifac} % The style of bibliography to be used
+% {plain} : plain bibliography
+% {unsrt} : The references are ordered according to the sequence that appears first
+% {alpha} : Style used by computer scientists
+% *when using the harvard style* use {ifac} a downloaded .bst file
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{Aryabatta's Identity for Control Design}
+
+Polynomial equations of the form
+\begin{align*}
+X(z)+D(z) + Y(z)N(z) = C(z)
+\end{align*}
+arise frequently in control system design. In the above equation, $D(z)$, $N(z)$ and $C(z)$ are known polynomials and $X(z)$ and $Y(z)$ are unknowns, to be determined. This equation is known as Diophatine equation \cite{vk79,tk80} and Aryabatta's identity \cite{mv85}. A solution technique to this identity is presented in
+\cite{cp82}.  Matlab and Scilab implementations of this solution are
+available on the web \cite{kmm1-07}.
+
+% cite as noun *works only for harvard style* of referencing, where the name of reference appears without the brackets
+The textbook by \citeasnoun{kmm07} 
+illustrates several control design
+examples using Aryabhatta's identity.  The approach followed in this
+book is explained in \cite{ms04,km06}.  In addition to handling
+control design problems in conventional domains, this approach will 
+be useful also for naturally discrete time problems that arise in
+computing systems, see for example, \cite{mmr03,mrbm04,vs06}.
+
+\bibliography{ref} % This tells LaTeX the file name in which the references can be found
+\end{document}
+
+% Procedure for adding references
+% 1. Make the source as above
+% 2. In command line, go the folder containing the *.tex and **.bib file (where *,** are to be replaced with your respective filenames) 
+% replace * with your filename in the following commands
+% 3. run `pdflatex *'
+% 4. run `bibtex *'
+% 5. run `pdflatex *' twice
