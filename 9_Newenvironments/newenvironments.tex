@@ -1,0 +1,48 @@
+% newenvironment can be used to create a section of the file with custom formatting
+%\newenvironment{environment name}{start commands}{end commands}
+% \newenvironment{environment name}[parameters]{start commands}{end commands}
+
+
+\documentclass{article}
+\usepackage{color}
+\newenvironment{bluetext}{\begin{center}\color{blue}}{\end{center}} % To center the text and color it with blue
+
+\newenvironment{bluetext_1}[1]{\begin{center}\color{blue}\textbf{\textit{#1}}\\[12pt]}{\end{center}} % adding a title to the blue text by getting the title as an input parameter
+
+% renew environment is for overloading existing environment
+%\renewenvironment{environment name}{start commands}{end commands}
+\renewenvironment{itemize}{\begin{center}\large}{\end{center}} % centers and prints a large text
+
+\newenvironment{itemizecolor}[1]{\begin{center}\color{#1}\large}{\end{center}} % centers and prints a large text according to color received as input [red, blue, yellow, green]
+
+
+\begin{document}
+Outside environment. Outside environment. Outside environment. Outside environment. 
+Outside environment. Outside environment. Outside environment. Outside environment. 
+\begin{bluetext}
+Inside environment. Inside environment.
+\end{bluetext}
+Outside environment. Outside environment. Outside environment. Outside environment. Outside environment.
+
+Outside environment. Outside environment. Outside environment. Outside environment. 
+Outside environment. Outside environment. Outside environment. Outside environment. 
+\begin{bluetext_1}{Parameter}
+Inside environment.
+\end{bluetext_1}
+Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment.
+
+Outside environment. Outside environment. Outside environment. Outside environment. 
+Outside environment. Outside environment. Outside environment. Outside environment. 
+\begin{itemize}
+Inside environment. Inside environment.
+\end{itemize}
+Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment.
+
+Outside environment. Outside environment. Outside environment. Outside environment. 
+Outside environment. Outside environment. Outside environment. Outside environment. 
+\begin{itemizecolor}{green}
+Inside environment. Inside environment.
+\end{itemizecolor}
+Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment. Outside environment.
+
+\end{document}
