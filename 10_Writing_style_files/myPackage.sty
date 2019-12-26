@@ -1,0 +1,32 @@
+%% load the required packages
+
+%\RequirePackage{background}
+
+%% define the new commands
+
+%\newcommand{\iitb}{\textbf{Indian Institute of Technology - Bombay}}
+
+%\newcommand{\iitbbg}{\backgroundsetup{scale=1,angle=0,opacity=0.1,contents={\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{iitblogo.pdf}}}}
+
+%% we do not compile style files
+
+%.................................................................................................
+% Creating standard style files for sharing with community
+
+% Identification: Package name and version
+\NeedsTeXFormat{LaTeX2e} % specifies the version of LaTeX in which this style file will work
+\ProvidesPackage{myPackage}[1900/12/31 v0.01 LaTeX package for my own purpose] % ProvidesPackage is used for identification of the package *package name should be identical to the file name*, contains details of release date and version number
+
+% Preliminary declarations: Details of required packages
+\RequirePackage{background}
+
+% User code
+\newcommand{\iitb}{\textbf{Indian Institute of Technology - Bombay}}
+
+\newcommand{\iitbbg}{\backgroundsetup{scale=1,angle=0,opacity=0.1,contents={\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{iitblogo.pdf}}}}
+
+\endinput % indicates that the style file ends here
+
+% to share a style file with the community: upload the style file on the comprehensive TeX archive Network
+% https://ctan.org/upload
+% Provide proper documentation and read the guidelines before uploading

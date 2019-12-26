@@ -1,0 +1,12 @@
+% style files are also known as packages
+% to reuse same code multiple times in the SAME document use {newcommand or newenvironment}
+% to reuse same code multiple times in DIFFERENT documents use {style files}
+% moreover the tex file remains clean when style files are used
+
+\documentclass{article}
+\usepackage{myPackage}
+
+\begin{document}
+Welcome to \iitb
+\iitbbg % requires twice compilation
+\end{document}
